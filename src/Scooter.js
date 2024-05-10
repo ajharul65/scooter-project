@@ -34,6 +34,14 @@ class Scooter {
     }, 1000);
 }
 
+requestRepair() {
+  setTimeout(() => {
+      this.isBroken = false;
+      console.log("Repair completed.");
+  }, 5000);
+}
+}
+
 }
 
 module.exports = Scooter
