@@ -7,9 +7,9 @@ class ScooterApp {
   // ScooterApp code here
   constructor() {
     this.stations = {
-        'Station A': [],
-        'Station B': [],
-        'Station C': []
+        'station A': [],
+        'station B': [],
+        'station C': []
     };
     this.registeredUsers = {};
 }
