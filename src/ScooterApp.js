@@ -1,4 +1,7 @@
 // require the User and Scooter classes - see where they can be used in ScooterApp.js
+const Scooter = require('./Scooter')
+const User = require('./User')
+
 
 class ScooterApp {
   // ScooterApp code here
@@ -12,18 +15,20 @@ class ScooterApp {
 }
 
 registerUser(username, password, age) {
-    if (this.registeredUsers[username]) {
-        throw new Error('User already registered.');
-    }
-    if (age < 18) {
-        throw new Error('User is too young to register.');
-    }
-    const newUser = new User(username, password, age);
+    this.registerUser instanceof User
+    if (!username instanceof User && age>=18) {
+        const newUser = new User(username, password, age);
     this.registeredUsers[username] = newUser;
     console.log(`User ${username} registered.`);
-    return newUser;
+    return newUser;}
+    
+    
+    else if(username instanceof User || age<18){
+        throw new Error('already registered or too young');
+        
+        
+    }
 }
-
 loginUser(username, password) {
     const user = this.registeredUsers[username];
     if (!user || user.password !== password) {

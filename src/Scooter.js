@@ -6,7 +6,7 @@ class Scooter {
   constructor(station){
     this.station = station
     this.user = null
-    this.serial +=nextSerial
+    this.serial += Scooter.nextSerial
     this.charge = 100
     this.isBroken = false
   }
@@ -22,6 +22,18 @@ class Scooter {
     this.station = station;
     this.user = null
   }
+
+  recharge() {
+    const timer = setInterval(() => {
+        if (this.charge < 100) {
+            this.charge += 10;
+            console.log(`Charge increased to ${this.charge}%`);
+        } else {
+            clearInterval(timer);
+        }
+    }, 1000);
+}
+
 }
 
 module.exports = Scooter
