@@ -7,14 +7,15 @@ class User {
     this.loggedIn = false
   }
   login(password){
-    if(this.user.find(user => user.password === password)){
-        this.loggedIn = true
+    if (password === this.password) {
+      this.loggedIn = true;
     }
     else{
       throw Error ('incorrect password')
     }
 
   }
+
 
   logout(){
     this.loggedIn = false

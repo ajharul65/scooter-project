@@ -27,21 +27,22 @@ class Scooter {
     const timer = setInterval(() => {
         if (this.charge < 100) {
             this.charge += 10;
-            console.log(`Charge increased to ${this.charge}%`);
-        } else {
+            console.log(this.charge+'%');
+        } 
+        
+        else {
             clearInterval(timer);
-        }
-    }, 1000);
+        }          }, 1000);
 }
 
 requestRepair() {
   setTimeout(() => {
       this.isBroken = false;
-      console.log("Repair completed.");
+      console.log("repair completed.");
   }, 5000);
 }
 }
 
-}
+
 
 module.exports = Scooter

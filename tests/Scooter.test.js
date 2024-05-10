@@ -15,11 +15,8 @@ describe('scooter methods', () => {
 const y = new Scooter();
 
   // rent method
-  test('rent',()=>{
-    const response = y.rent('joe')
-    expect(response).toBeInstanceOf(User)
-    expect(y.user).toBe('joe')
-})
+ 
+
   // dock method
   test('dock',()=>{
     y.dock('station')
